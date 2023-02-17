@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('blue-background.jpg');
+    background-size: cover;
+}
+
+main{
+    font-size: 18px;
+    min-height: 100vh;
+    max-width: 1400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.one, .two, .third{
+    width: 20%;
+    height: 280px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: flex-start; 
+    padding: 20px ;    
+    /* background-color: #ffffff; */
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 6px 10px 0 #797979; 
+    overflow: hidden;
+    position: relative;
+
+}
+
+
+.num, .detail{
+    color: #797979;
+}
+
+.text{
+    margin-top: 15px;
+}
+
+
+.num{
+    position: fixed;
+    font-size: 45px;
+    opacity: 0.4; 
+}
+
+.detail{
+    margin-top:10px;
+}
+
+
+.one::before, .two::before, .third::before
+{
+    content: "";    
+    position: absolute;
+    background-color: #0aa4e2;    
+    color: #ffffff;
+    width: 100%;
+    height: 0%;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    transition: all 0.6s; 
+}
+
+.one:hover:before, .two:hover:before, .third:hover:before{
+    height: 100%;
+}
